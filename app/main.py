@@ -36,7 +36,10 @@ def startup_event():
 async def shutdown_event():
     Database.disconnect()
     print("Database Connection closed")
-
+    
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 # Link all the API routes
 app.include_router(user.router)
