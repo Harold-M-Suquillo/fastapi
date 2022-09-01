@@ -39,7 +39,7 @@ async def shutdown_event():
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World!!!!!"}
+    return {"message": "HI FATTY"}
 
 # Link all the API routes
 app.include_router(user.router)
